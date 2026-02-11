@@ -23,7 +23,16 @@
         "passIntegrationTests": "false",
         "securityComplianceCheck": "false"
       },
-      "status": "pending"
+      "status": "skipped",
+      "taskSummary": "Task not applicable - ContosoUniversity is a .NET 6.0 application, not a Java application. Cannot upgrade Java to version 21.",
+      "successCriteriaStatus": {
+        "passBuild": "N/A",
+        "generateNewUnitTests": "false",
+        "generateNewIntegrationTests": "false",
+        "passUnitTests": "N/A",
+        "passIntegrationTests": "N/A",
+        "securityComplianceCheck": "N/A"
+      }
     },
     {
       "type": "upgrade",
@@ -48,7 +57,16 @@
         "passIntegrationTests": "false",
         "securityComplianceCheck": "false"
       },
-      "status": "pending"
+      "status": "skipped",
+      "taskSummary": "Task not applicable - ContosoUniversity is a .NET ASP.NET Core application, not a Spring Boot application. Cannot upgrade Spring Boot to version 3.4.",
+      "successCriteriaStatus": {
+        "passBuild": "N/A",
+        "generateNewUnitTests": "false",
+        "generateNewIntegrationTests": "false",
+        "passUnitTests": "N/A",
+        "passIntegrationTests": "N/A",
+        "securityComplianceCheck": "N/A"
+      }
     },
     {
       "type": "upgrade",
@@ -73,7 +91,16 @@
         "passIntegrationTests": "false",
         "securityComplianceCheck": "true"
       },
-      "status": "pending"
+      "status": "success",
+      "taskSummary": "Successfully upgraded project from .NET 6.0 to .NET 8.0 LTS and updated all dependencies to latest compatible versions. Build passes, no test failures, and critical security vulnerabilities addressed.",
+      "successCriteriaStatus": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "generateNewIntegrationTests": "false",
+        "passUnitTests": "true",
+        "passIntegrationTests": "false",
+        "securityComplianceCheck": "true"
+      }
     }
   ],
   "metadata": {
