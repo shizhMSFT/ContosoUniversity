@@ -1,0 +1,125 @@
+{
+  "version": "1.0.0",
+  "producer": ".NET AppCAT CLI",
+  "metadata": {
+    "analysisStartTime": "2026-02-11T04:52:34.4793365Z",
+    "analysisEndTime": "2026-02-11T04:52:34.6161356Z",
+    "privacyMode": "Protected",
+    "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2271074",
+    "targetIds": [
+      "AppService.Windows",
+      "AppService.Linux",
+      "AKS.Linux",
+      "AKS.Windows",
+      "ACA",
+      "AppServiceContainer.Linux",
+      "AppServiceContainer.Windows",
+      "AppServiceManagedInstance.Windows"
+    ],
+    "targetDisplayNames": [
+      "Azure App Service",
+      "Azure Kubernetes Service",
+      "Azure Container Apps",
+      "Azure App Service Container",
+      "Azure App Service Managed Instance"
+    ],
+    "os": [
+      "windows",
+      "linux"
+    ]
+  },
+  "summary": {
+    "totalProjects": 1,
+    "totalIssues": 1,
+    "totalIncidents": 1,
+    "totalEffort": 3,
+    "charts": {
+      "severity": {
+        "mandatory": 0,
+        "optional": 1,
+        "potential": 0,
+        "information": 0
+      },
+      "category": {
+        "Scale": 1
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "ContosoUniversity",
+      "issues": 1,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "",
+        "frameworks": [],
+        "languages": [],
+        "tools": []
+      },
+      "incidents": [
+        {
+          "ruleId": "Scale.0001",
+          "incidentId": "a0e540ed-2817-4fb8-a048-45d5c6173d8f",
+          "location": "ContosoUniversity",
+          "locationKind": "File",
+          "snippet": "Found 34 files matching the rule:\n\nContosoUniversity/Pages/Shared/_Layout.cshtml.css\nContosoUniversity/wwwroot/css/site.css\nContosoUniversity/wwwroot/favicon.ico\nContosoUniversity/wwwroot/js/site.js\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css\nContosoUniversity/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js\nContosoUniversity/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js\nContosoUniversity/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js\nContosoUniversity/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js\nContosoUniversity/wwwroot/lib/bootstrap/dist/js/bootstrap.js\nContosoUniversity/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js\nContosoUniversity/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js\nContosoUniversity/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js\nContosoUniversity/wwwroot/lib/jquery-validation/dist/additional-methods.js\nContosoUniversity/wwwroot/lib/jquery-validation/dist/additional-methods.min.js\nContosoUniversity/wwwroot/lib/jquery-validation/dist/jquery.validate.js\nContosoUniversity/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js\nContosoUniversity/wwwroot/lib/jquery/dist/jquery.js\nContosoUniversity/wwwroot/lib/jquery/dist/jquery.min.js\n",
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 3
+            }
+          },
+          "labels": []
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "Scale.0001": {
+      "id": "Scale.0001",
+      "description": "Static content detected.\n\nYour current approach of serving static content directly might lead to increased costs, performance issues, maintenance challenges (requiring application redeployment for content changes), and security risks.\n\nConsider moving static content to Azure Blob Storage and adding Azure CDN.",
+      "title": "Static content detected",
+      "severity": "optional",
+      "effort": 3,
+      "links": [
+        {
+          "title": "Azure Blob Storage",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2250574"
+        },
+        {
+          "title": "Azure CDN",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2250392"
+        }
+      ],
+      "labels": []
+    }
+  }
+}
